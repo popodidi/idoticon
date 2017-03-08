@@ -1,7 +1,7 @@
 # Idoticon
 
 Idoticon 
-<img src="idoticon.svg" alt="idoticon" style="width: 300px; height: 300px;"/>
+<img src="./idoticon.svg" alt="idoticon" style="width: 500px; height: 300px;"/>
 
 ## install
 ```bash
