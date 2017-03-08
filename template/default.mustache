@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Idoticon</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+    <script>
+        function draw() {
+            var snap = Snap({{size}}, {{size}});
+            var shadowFilter = snap.filter(Snap.filter.shadow(0, 0, 20, "black", .3))
+            snap.rect(0, 0,{{size}}, {{size}})
+                    .attr({
+                        fill          : Snap.rgb({{background.r}}, {{background.g}}, {{background.b}}),
+                        "fill-opacity": {{background.opacity}}
+                    });
+            {{#dots}}
+                snap.circle({{center.x}}, {{center.y}}, 0)
+                        .attr({
+                            fill          : Snap.rgb({{color.r}},{{color.g}}, {{color.b}}),
+                            "fill-opacity": {{color.opacity}}
+                        }).animate({
+                    r: {{radius}}
+                }, {{animateDelay}});
+            {{/dots}}
+        }
+    </script>
+</head>
+<body style="text-align: center" onload="draw();">
+<h1 style="text-align: center">{{idStr}}</h1>
+</body>
+</html>
