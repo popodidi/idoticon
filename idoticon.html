@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Idoticon</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+    <script>
+        function draw() {
+            <!--var snap = Snap(300, 300);-->
+            var snap = Snap("#idoticon");
+            var shadowFilter = snap.filter(Snap.filter.shadow(0, 0, 20, "black", .3))
+            snap.rect(0, 0,300, 300)
+                    .attr({
+                        fill          : Snap.rgb(204.70587961375713, 151.47058330476284, 107.94117592275143),
+                        "fill-opacity": 0.2
+                    });
+                snap.circle(205.53811792980463, 125.66929421829795, 0)
+                        .attr({
+                            fill          : Snap.rgb(145,55, 65),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 28.492400000000288
+                }, 800);
+                snap.circle(174.33070578170205, 205.53811792980463, 0)
+                        .attr({
+                            fill          : Snap.rgb(145,55, 65),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 28.492400000000288
+                }, 800);
+                snap.circle(94.46188207019536, 174.33070578170205, 0)
+                        .attr({
+                            fill          : Snap.rgb(145,55, 65),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 28.492400000000288
+                }, 800);
+                snap.circle(125.66929421829794, 94.46188207019536, 0)
+                        .attr({
+                            fill          : Snap.rgb(145,55, 65),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 28.492400000000288
+                }, 800);
+                snap.circle(184.1687460594026, 138.44311911168293, 0)
+                        .attr({
+                            fill          : Snap.rgb(45,45, 45),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 23.614591883647
+                }, 200);
+                snap.circle(177.09292546749475, 173.81256165874353, 0)
+                        .attr({
+                            fill          : Snap.rgb(45,45, 45),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 23.614591883647
+                }, 200);
+                snap.circle(142.9241794080922, 185.3694425470606, 0)
+                        .attr({
+                            fill          : Snap.rgb(45,45, 45),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 23.614591883647
+                }, 200);
+                snap.circle(115.83125394059742, 161.55688088831707, 0)
+                        .attr({
+                            fill          : Snap.rgb(45,45, 45),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 23.614591883647
+                }, 200);
+                snap.circle(122.90707453250522, 126.18743834125651, 0)
+                        .attr({
+                            fill          : Snap.rgb(45,45, 45),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 23.614591883647
+                }, 200);
+                snap.circle(157.0758205919078, 114.63055745293939, 0)
+                        .attr({
+                            fill          : Snap.rgb(45,45, 45),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 23.614591883647
+                }, 200);
+                snap.circle(129.2606586884258, 191.3729153182951, 0)
+                        .attr({
+                            fill          : Snap.rgb(185,195, 175),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 19.779670932325374
+                }, 600);
+                snap.circle(124.53967496152117, 111.35274590727315, 0)
+                        .attr({
+                            fill          : Snap.rgb(185,195, 175),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 19.779670932325374
+                }, 600);
+                snap.circle(196.199666350053, 147.27433877443175, 0)
+                        .attr({
+                            fill          : Snap.rgb(185,195, 175),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 19.779670932325374
+                }, 600);
+                snap.circle(99.55781490233902, 44.349071790108525, 0)
+                        .attr({
+                            fill          : Snap.rgb(85.39215686265379,49.705882352776825, 121.07843137253076),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 11.976235294117423
+                }, 400);
+                snap.circle(266.7174803120025, 159.14125038797442, 0)
+                        .attr({
+                            fill          : Snap.rgb(85.39215686265379,49.705882352776825, 121.07843137253076),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 11.976235294117423
+                }, 400);
+                snap.circle(83.72470478565862, 246.50967782191708, 0)
+                        .attr({
+                            fill          : Snap.rgb(85.39215686265379,49.705882352776825, 121.07843137253076),
+                            "fill-opacity": 0.95
+                        }).animate({
+                    r: 11.976235294117423
+                }, 400);
+        }
+
+        function getSvg() {
+            var svg = document.getElementById("idoticon");
+            var serializer = new XMLSerializer();
+            var source = serializer.serializeToString(svg);
+            if (!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)) {
+                source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
+            }
+            if (!source.match(/^<svg[^>]+"http\:\/\/www\.w3\.org\/1999\/xlink"/)) {
+                source = source.replace(/^<svg/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
+            }
+            source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+            var url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(source);
+
+            window.location = url;
+
+        }
+    </script>
+</head>
+<body style="text-align: center" onload="draw();">
+<h1 style="text-align: center">idoticon</h1>
+<div>
+    <svg id='idoticon' version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 300px; height: 300px">
+        ...
+    </svg>
+</div>
+<button onclick="getSvg();">SVG</button>
+</body>
+</html>

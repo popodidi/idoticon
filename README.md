@@ -1,7 +1,7 @@
 # Idoticon
 
-Idoticon 
-<img src="https://raw.githubusercontent.com/popodidi/idoticon/develop/idoticon.svg" alt="idoticon" style="width: 500px; height: 300px;"/>
+Idoticon  
+<img src="https://raw.githubusercontent.com/popodidi/idoticon/develop/idoticon.html" alt="idoticon" style="width: 300px; height: 300px;"/>
 
 ## install
 ```bash
