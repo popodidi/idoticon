@@ -9,7 +9,7 @@
     "clear": "rm idoticon/*",
     "b_and_t": "npm run build && npm run test"
   },
-  "bin":{
+  "bin": {
     "idoticon": "lib/bin/idoticon.js"
   },
   "author": "Hao",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.1.11"
   }
 }

@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-
+import 'babel-polyfill';
 import command from 'commander';
 import defaultRender from '../renderer/default';
 import path from 'path';
