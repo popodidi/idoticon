@@ -10,7 +10,7 @@ command
     .option('-s, --size [size]', 'size, default to 500')
     .option('-m, --margin [margin]', 'margin, default to 20')
     // .option('-t, --type [type]', 'Report type, [html]')
-    .option('-o, --output [outputPath]', 'Output destination, default to ./report/')
+    .option('-o, --output [outputPath]', 'Output destination, default to ./idoticon/')
     .option('-f, --file [fileName]', 'Output file name, default to YYYYMMDD-{identifier}')
     .arguments('[identifier]')
     .action((id) => {
