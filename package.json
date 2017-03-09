@@ -1,19 +1,26 @@
 {
   "name": "idoticon",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "identicon generator",
-  "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
     "test": "node test/test.js",
     "clear": "rm idoticon/*",
     "b_and_t": "npm run build && npm run test"
   },
-  "bin":{
+  "bin": {
     "idoticon": "lib/bin/idoticon.js"
   },
   "author": "Hao",
   "license": "ISC",
+  "keywords": [
+    "identicon",
+    "generator",
+    "dot",
+    "graph"
+  ],
+  "homepage": "https://github.com/popodidi/idoticon",
+  "repository": "https://github.com/popodidi/idoticon.git",
   "dependencies": {
     "commander": "^2.9.0",
     "lodash": "^4.17.4",
@@ -23,6 +30,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.1.11"
   }
 }

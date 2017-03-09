@@ -6,8 +6,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
     <script>
         function draw() {
-            var snap = Snap({{size}}, {{size}});
-            var shadowFilter = snap.filter(Snap.filter.shadow(0, 0, 20, "black", .3))
+            var snap = Snap("#idoticon");
+            snap.rect(0, 0,{{size}}, {{size}})
+                    .attr({
+                        fill: Snap.rgb(255, 255, 255),
+                    });
             snap.rect(0, 0,{{size}}, {{size}})
                     .attr({
                         fill          : Snap.rgb({{background.r}}, {{background.g}}, {{background.b}}),
@@ -23,9 +26,32 @@
                 }, {{animateDelay}});
             {{/dots}}
         }
+
+        function getSvg() {
+            var svg = document.getElementById("idoticon");
+            var serializer = new XMLSerializer();
+            var source = serializer.serializeToString(svg);
+            if (!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)) {
+                source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
+            }
+            if (!source.match(/^<svg[^>]+"http\:\/\/www\.w3\.org\/1999\/xlink"/)) {
+                source = source.replace(/^<svg/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
+            }
+            source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+            var url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(source);
+
+            window.location = url;
+
+        }
     </script>
 </head>
 <body style="text-align: center" onload="draw();">
 <h1 style="text-align: center">{{idStr}}</h1>
+<div>
+    <svg id='idoticon' version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: {{size}}px; height: {{size}}px">
+        ...
+    </svg>
+</div>
+<button onclick="getSvg();">SVG</button>
 </body>
 </html>
