@@ -1,7 +1,6 @@
 # Idoticon
 
-Idoticon  
-<img src="https://raw.githubusercontent.com/popodidi/idoticon/develop/idoticon.html" alt="idoticon" style="width: 300px; height: 300px;"/>
+Idoticon provides cli to build identicon, which takes utf8 data of identifier string as inputs and leverages [Snap.svg](http://snapsvg.io) and [mustache](http://mustache.github.io) to render output `.html`.
 
 ## install
 ```bash
@@ -29,3 +28,14 @@ $ idoticon -h
     -o, --output [outputPath]  Output destination, default to ./report/
     -f, --file [fileName]      Output file name, default to YYYYMMDD-{identifier}
 ```
+
+## example
+```shell
+$ idoticon idoticon
+```
+![](example/idoticon.png)
+
+```shell
+$ idoticon -s 300 -m 10 hello
+```
+![](example/hello.png)
