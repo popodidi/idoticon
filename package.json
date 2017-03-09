@@ -12,7 +12,7 @@
     "idoticon": "lib/bin/idoticon.js"
   },
   "author": "Hao",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "identicon",
     "generator",

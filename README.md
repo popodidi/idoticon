@@ -1,5 +1,6 @@
 # Idoticon
 
+[![NPM version](https://img.shields.io/npm/v/idoticon.svg?style=flat-square)](https://npmjs.org/package/idoticon)
 [![Build Status](https://travis-ci.org/popodidi/idoticon.svg?branch=master)](https://travis-ci.org/popodidi/idoticon)
 
 Idoticon provides cli to build identicon, which takes utf8 data of identifier string as inputs and leverages [Snap.svg](http://snapsvg.io) and [mustache](http://mustache.github.io) to render output `.html`.
