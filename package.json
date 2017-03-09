@@ -1,6 +1,6 @@
 {
   "name": "idoticon",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "identicon generator",
   "scripts": {
     "build": "babel src -d lib",
@@ -12,7 +12,7 @@
     "idoticon": "lib/bin/idoticon.js"
   },
   "author": "Hao",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "identicon",
     "generator",
