@@ -1,12 +1,6 @@
-var defaultGenerator = require('../lib/generator/default');
+var defaultGenerator = require('../lib/renderer/default');
 
-console.log("========================================");
-defaultGenerator.default("A");
-defaultGenerator.default("H");
-defaultGenerator.default("changhao");
-defaultGenerator.default("rubyxiao");
-defaultGenerator.default("tinayiu");
-defaultGenerator.default("你好");
-
-console.log("========================================");
-// console.log("function return", generate.default("changhao"));
+defaultGenerator.default("A", 500, 20, "./", "A").catch((err) => {
+    console.log(err);
+    throw err;
+});

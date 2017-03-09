@@ -27,7 +27,7 @@ $ idoticon -h
     -h, --help                 output usage information
     -s, --size [size]          size, default to 500
     -m, --margin [margin]      margin, default to 20
-    -o, --output [outputPath]  Output destination, default to ./report/
+    -o, --output [outputPath]  Output destination, default to ./idoticon/
     -f, --file [fileName]      Output file name, default to YYYYMMDD-{identifier}
 ```
 
